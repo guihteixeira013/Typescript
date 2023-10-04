@@ -59,3 +59,20 @@ enum Color {
 let color: Color = Color.Green;
 console.log(color);
 
+// any  
+let semCerteza: any = 4;
+console.log(typeof(semCerteza));
+semCerteza = 'acho que agora sou um texto';
+console.log(typeof(semCerteza));
+
+// FUNCTIONS
+function getSoma(n1: number, n2: number):number {
+  return n1 + n2;
+}
+console.log(getSoma(2,3));
+
+function getFullName(person: {name: string, lastName: string}):string {
+  return `${person.name} ${person.lastName}`;
+}
+
+console.log(getFullName({name: `Guilherme`, lastName: `Teixeira`}));
