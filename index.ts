@@ -42,10 +42,34 @@ document.getElementById("tabuada-button").addEventListener('click', () => {
   table.innerHTML = ""; // quando button clicado, zera toda a table
   // estrutura de repetição
   for (let i = 1; i <= 10; i++) {
+    // inserir uma linha dentro da tabela
     const row = table.insertRow();
+    // inserir uma celula dentro da linha
     const cell1 = row.insertCell();
+    // inserir outra celula dentro da mesma linha
     const cell2 = row.insertCell();
+    // adicionar texto dentro da célula 1
     cell1.innerHTML = `${num} x ${i} `;
+    // adicionar texto dentro da célula 2
     cell2.innerHTML = `= ${num * i}`;
   }
+})
+
+// SCRIPT NÚMEROS ALEATÓRIOS
+document.getElementById("random-button").addEventListener('click', () => {
+  let num: number = Number(
+    (<HTMLInputElement>document.getElementById("random-input")).value
+  )
+
+  const table = document.getElementById("random-table");
+  table.innerHTML = ``;
+
+  for (let i = 1; i <= num; i++) {
+    const row = table.insertRow();
+    const Cell1 = row.insertCell();
+    const Cell2 = row.insertCell();
+    Cell1.innerHTML = `${i}`;
+    Cell2.innerHTML = `${Math.trunc(Math.random() * 100)}`;
+  }
+
 })
