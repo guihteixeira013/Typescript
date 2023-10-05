@@ -1,4 +1,5 @@
 // Import stylesheets
+import { MyTimer } from './my-timer'; // importando myTimer para usar no temporizador
 import './style.css';
 
 //  SCRIPT PAR OU ÍMPAR
@@ -71,5 +72,18 @@ document.getElementById("random-button").addEventListener('click', () => {
     Cell1.innerHTML = `${i}`;
     Cell2.innerHTML = `${Math.trunc(Math.random() * 100)}`;
   }
+})
 
+// SCRIPT TEMPORIZADOR
+  // declarando e enviando para a classe o elemento HTML que desejo manipular 
+let myTimer = new MyTimer(document.getElementById("temp-span")); 
+
+// start button
+document.getElementById("temp-start-button").addEventListener('click', () => {
+  myTimer.start();
+})
+
+// stop button
+document.getElementById("temp-start-button").addEventListener('click', () => {
+  myTimer.stop();
 })
