@@ -84,6 +84,6 @@ document.getElementById("temp-start-button").addEventListener('click', () => {
 })
 
 // stop button
-document.getElementById("temp-start-button").addEventListener('click', () => {
+document.getElementById("temp-stop-button").addEventListener('click', () => {
   myTimer.stop();
 })
